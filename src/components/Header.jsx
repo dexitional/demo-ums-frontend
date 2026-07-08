@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdCancel, MdLogout, MdSpaceDashboard } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../assets/img/logo_sso.png';
+import Logo from '../assets/img/logo.webp';
 import { useUserStore } from '../utils/authService';
 const { REACT_APP_API_URL } = import.meta.env;
 
@@ -32,8 +32,8 @@ function Header({ user = null,logout  = () => {}}) {
   return (
     <header className="w-full">
         <div className="w-full bg-primary">
-            <div className="px-3 md:px-0 md:mx-auto w-full h-14 md:max-w-6xl flex items-center">
-                <img src={Logo} alt="Logo" className="h-6 md:h-12" />
+            <div className="px-3 md:px-0 md:mx-auto w-full h-22 md:max-w-6xl flex items-center">
+                <img src={Logo} alt="Logo" className="h-6 md:h-20" />
                 <div className="flex-1 flex items-center justify-end space-x-2">
                     <img src={`${REACT_APP_API_URL}/auth/photos/?tag=${user?.user?.tag}`} alt="" className="h-8 w-8 rounded-full object-cover bg-yellow-100/50 backdrop-blur-sm" />
                     <div className="hidden md:flex px-3 py-1 rounded-md border border-gray-200  bg-primary/20 bg-opacity-50 backdrop-blur-sm text-white font-semibold capitalize">{user?.user?.fname?.toLowerCase()} { user?.user?.mname && user?.user?.mname?.toLowerCase()+' '}{user?.user?.lname?.toLowerCase()}</div>

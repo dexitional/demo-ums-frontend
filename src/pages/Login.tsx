@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Adinkra2 from "../assets/img/adinkra-bullet.png";
 // import Adinkra from '../assets/img/logo/aucc/logo.png'
 import Adinkra from "../assets/img/adinkra-bullet.png";
-import Logo from "../assets/img/logo_sso.png";
+import Logo from "../assets/img/logo.webp";
 // @ts-ignore
 import { FaArrowLeft, FaLock } from "react-icons/fa";
 import { FcLock } from "react-icons/fc";
@@ -94,21 +94,21 @@ function Login() {
     <div className="w-full h-full bg-primary">
       <main className="mx-auto h-screen w-full md:max-w-7xl flex flex-col justify-center md:flex-row">
         <section className="md:py-8 flex-1 hidden md:flex flex-col items-start justify-start md:space-y-28">
-          <div>
-            {/* <img src={Logo} alt="" className="h-[6.5rem]"/> */}
-            <img src={Logo} alt="" className="h-[6.5rem]" />
-          </div>
-          <div className="pl-10 text-white space-y-10">
-            <h2 className="px-4 py-0.5 text-[1.1rem] font-bold rounded-md bg-primary-dark/70 text-slate-50 tracking-wider">
-              All Services in One location for Easy access.
+         
+          <div className="pl-10 flex flex-col text-white space-y-10">
+            <div className="self-center ">
+              <img src={Logo} alt="" className="h-[10rem]" />
+            </div>
+            <h2 className="px-4 py-2 w-fit mx-auto text-[1.4rem] font-bold font-roboto text-center rounded-md bg-primary-dark/70 text-slate-50 tracking-wider">
+              AKATSI COLLEGE OF EDUCATION
             </h2>
             <ul className="space-y-4 text-white">
-              <li className="flex items-center space-x-4">
+              {/* <li className="flex items-center space-x-4">
                 <img src={Adinkra2} alt="" className="h-4" />
                 <span className="text-[1.1rem] font-semibold">
                   Easy access to Admission Management System.
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center space-x-4">
                 <img src={Adinkra2} alt="" className="h-4" />
                 <span className="text-[1.1rem] font-semibold">
@@ -121,12 +121,12 @@ function Login() {
                   Easy access to Financial Management System.
                 </span>
               </li>
-              <li className="flex items-center space-x-4">
+              {/* <li className="flex items-center space-x-4">
                 <img src={Adinkra2} alt="" className="h-4" />
                 <span className="text-[1.1rem] font-semibold">
                   Easy access to Election Management System.
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center space-x-4">
                 <img src={Adinkra2} alt="" className="h-4" />
                 <span className="text-[1.1rem] font-semibold">
@@ -145,19 +145,19 @@ function Login() {
             </ul>
           </div>
         </section>
-        <section className="mx-2 my-1 py-2 shadow rounded-t-xl border-[3px] border-primary/20 backdrop-blur-lg bg-primary-dark/50 bg-[url('./assets/img/eagle.png')] bg-no-repeat bg-bottom flex md:hidden items-center justify-center">
-          <img src={Logo} alt="" className="h-10 w-fit" />
+        <section className="mx-2 my-1 py-2 shadow rounded-t-xl border-primary/20 backdrop-blur-lg bg-primary-dark/50 bg-[url('./assets/img/eagle.png')] bg-no-repeat bg-bottom flex md:hidden items-center justify-center">
+          <img src={Logo} alt="" className="h-20 w-fit" />
         </section>
         <section className="m-2 my-1 md:my-10 md:mx-4 md:w-[28rem] rounded-b-xl md:rounded-xl border-[3px] border-primary-dark/20 backdrop-blur-lg bg-primary bg-[url('./assets/img/eagle.png')] bg-no-repeat bg-bottom flex flex-col justify-between overflow-y-scroll scrollbar-hide">
           <div className="p-6 flex-1 flex flex-col items-center">
-            {/* <h1 className="my-4 md:my-10 text-3xl md:text-4xl text-white">Unified Portal</h1> */}
-            <img
+            <h1 className="md:hidden my-4 text-3xl md:text-4xl font-semibold font-mono text-primary-accent/50 tracking-widest">AKATSICO</h1>
+            <h1 className="hidden md:flex my-4 text-3xl md:text-4xl font-mono text-white">Unified Portal</h1>
+            {/* <img
               src={Adinkra}
               alt=""
               className="mt-20 p-2 h-22 md:h-24 rounded-md border-2 border-dashed opacity-40 shadow-lg -rotate-45 "
-            />
+            /> */}
             <div className="my-6 md:my-14 w-full space-y-8">
-              {/* Buttons */}
               <div
                 className={`${
                   loginform ? "hidden" : "flex"
@@ -186,7 +186,8 @@ function Login() {
                             // ux_mode="popup"
                             // redirect_uri="https:// - for popup"
                       /> */}
-                <button
+
+                {/* <button
                   onClick={async () => await setLoginform("voucher")}
                   className={`${
                     loginform ? "hidden" : "flex"
@@ -196,7 +197,8 @@ function Login() {
                   <span className="text-sm md:text-base text-primary-dark">
                     Apply with Admission Voucher
                   </span>
-                </button>
+                </button> */}
+
                 <button
                   onClick={async () => await setLoginform("staff")}
                   className={`${
@@ -237,9 +239,9 @@ function Login() {
                       ? "APPLICANT LOGIN"
                       : "STAFF LOGIN"}
                   </h1>
-                  <div className="relative opacity-50">
+                  {/* <div className="relative opacity-50">
                     <img src={Adinkra} alt="" className="h-10" />
-                  </div>
+                  </div> */}
                 </div>
                 <div>
                   <input
@@ -397,17 +399,17 @@ function Login() {
               }
 
             </div>
-             {/* Privacy Policy Link */}
-             <Link
-                  to="/mobile"
-                  className="block w-full py-2 px-4 text-center text-white/90 hover:text-white underline underline-offset-4 text-sm transition-colors"
-                >
-                  Get Student Mobile App
-                </Link>
+             
+             {/* <Link
+                to="/mobile"
+                className="block w-full py-2 px-4 text-center text-white/90 hover:text-white underline underline-offset-4 text-sm transition-colors"
+             >
+                Get Student Mobile App
+             </Link> */}
           </div>
           <div className="h-14 w-full flex items-center justify-center">
             <p className="text-white text-xs font-medium">
-              Copyright &copy; {new Date().getFullYear()} AUCB
+              Copyright &copy; {new Date().getFullYear()} Akatsico
             </p>
           </div>
         </section>

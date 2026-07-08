@@ -18,8 +18,8 @@ function AISNavItem({ title, url = "/", Icon }: Props) {
       to={absoluteUrl}
       className={({ isActive }) =>
         isActive
-          ? "px-4 py-2 flex items-center space-x-2 bg-primary/90 rounded-lg"
-          : "px-4 py-2 flex items-center space-x-2 hover:bg-primary/90 hover:rounded-lg group"
+          ? "px-4 py-2 flex items-center space-x-2 bg-primary rounded-lg"
+          : "px-4 py-2 flex items-center space-x-2 hover:bg-primary hover:rounded-lg group"
       }
     >
       {({ isActive }) => (
