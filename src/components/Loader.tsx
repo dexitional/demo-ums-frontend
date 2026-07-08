@@ -1,6 +1,6 @@
 import React from "react";
 import { LuLoaderCircle } from "react-icons/lu";
-import Logo from "../assets/img/logo/aucc/spin.png";
+import Logo from "../assets/img/logo.webp";
 
 type Props = {
   // children: React.ReactNode
